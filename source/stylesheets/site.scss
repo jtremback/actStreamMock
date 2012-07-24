@@ -1,0 +1,28 @@
+@import "compass/css3";
+@import "compass/css3/images";
+@import "compass/utilities/color";
+
+@import "reset";
+@import "base";
+@import "common";
+
+
+#stream {
+  margin-left: 50px;
+  width: 500px;
+  .tile {
+    @include box-shadow(inset 0 0 6px rgba(0, 0, 0, .2));
+    @include border-radius(.2em);
+    background: url("../images/noise_1.png");
+    position: relative;
+    padding: 1em;
+    margin: 1em;
+    & > div {
+      position: relative;
+      margin-bottom: 1em;
+    }
+    .hyp-annotation {
+      margin-bottom: 0;
+    }
+  }
+}
