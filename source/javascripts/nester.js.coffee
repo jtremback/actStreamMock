@@ -5,9 +5,6 @@ treeHtml =
  <div class="blue" style="padding-left:10px;">
     <div>{{node.name}}
     
-    <button ng-click="add(node)">+</button>
-    <button ng-hide="parent == undefined" ng-click="delete(parent, node)">x</button>
-
   </div>
 
     <div ng-repeat="child in node.children">
@@ -22,9 +19,7 @@ kneeHtml =
  <div class="yellow" style="padding-left:10px;">
     <div>{{node.name}}
     <p><a ng-click="showHide=!showHide">Toggle State: {{!!showHide}}</a></p>
-    <button ng-click="add(node)">+</button>
-    <button ng-hide="parent == undefined" ng-click="delete(parent, node)">x</button>
-
+    
   </div>
 
     <div ng-repeat="child in node.children">
@@ -68,8 +63,33 @@ link : (scope, elem, attrs) ->
 
   $scope.root = {
 
-  name : "root"
-  children : [ { name : "Child 1", children : [] }, {name : "Child 2", children : [] }]
+    name : "root"
+    children : [ 
+      {name : "Child 1", 
+      children : [
+        {name : "Grandchild 1",
+        children : [] }
+        ] }, 
+      
+      {name : "Child 2", 
+      children : [] }
+    ]
+
+  }
+
+  $scope.boot = {
+
+    name : "boot"
+    children : [ 
+      {name : "Child 1", 
+      children : [
+        {name : "Grandchild 1",
+        children : [] }
+        ] }, 
+      
+      {name : "Child 2", 
+      children : [] }
+    ]
   }
 
 
