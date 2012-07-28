@@ -28,9 +28,13 @@
 }
 
 .blue {
-  background: blue;
+  background: rgba(0, 0, 255, .3);
 }
 
-.yellow {
-  background: yellow;
+.red {
+  background: rgba(255, 0, 0, .3);
+}
+
+.green {
+  background: rgba(0, 255, 0, .3);
 }
