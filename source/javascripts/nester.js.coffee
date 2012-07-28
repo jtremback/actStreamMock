@@ -1,9 +1,16 @@
 app = angular.module("myApp", [])
 
-otherHtml =
+fleeHtml =
   """
-    <knee node='{{}}'
+ <div class="green" style="padding-left:10px;">
+    <div>{{node.name}}
+    
+  </div>
 
+    <div ng-repeat="child in node.children">
+      <knee node="child" parent="node"></tree>
+         </div>
+ </div>
   """
 
 treeHtml =
@@ -35,19 +42,6 @@ kneeHtml =
 
   """
 
-fleeHtml =
-  """
- <div ng-click="showHide=!showHide" class="green" style="padding-left:10px;">
-    <div>{{node.name}}
-    <p><a>Toggle State: {{!!showHide}}</a></p>
-    
-  </div>
-
-    <div ng-hide="showHide" ng-repeat="child in node.children">
-      <knee node="child" parent="node"></tree>
-         </div>
- </div>
-  """
     
 # Identifies directives in html
 app.directive 'tree', ($compile) -> {
@@ -107,40 +101,22 @@ link : (scope, elem, attrs) ->
     text: "<p>I have two separate editions of Brooks, with two difference sets of pagination. In neither edition, on page 170, is there anything to actually confirm, Data from a 15-foot (4.6 m) rangefinder in the armoured hood was input into a Mk IV* Dreyer Fire Control Table located in the Transmitting Station (TS) where it was converted into range and deflection data for use by the guns. I would suggest a closer reading of the pages involved.</p>"
   ]
 
-@OtherCtrl = ($scope) ->
-
-  $scope.list = [
-   
-    name: "roots",
-    name: "foots",
-    name: "boots"
-
-  ]
 
 @MyCtrl = ($scope) ->
 
   $scope.roots = {
 
-    name : "root"
+    name : "My Annotations List"
     children : [ 
-      {name : "Child 1", 
+      {name : "Annotation 1", 
       children : [
-        {name : "Grandchild 1",
+        {name : "Reply 1",
+        children : [] }
+        {name : "Reply 2",
         children : [] }
         ] }, 
       
-      {name : "Child 2", 
-      children : [] }
-    ],
-    name : "root2"
-    children : [ 
-      {name : "Child 1", 
-      children : [
-        {name : "Grandchild 1",
-        children : [] }
-        ] }, 
-      
-      {name : "Child 2", 
+      {name : "Annotation 2", 
       children : [] }
     ]
   }
