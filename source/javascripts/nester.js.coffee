@@ -16,28 +16,29 @@ treeHtml =
 
 kneeHtml =
   """
- <div class="yellow" style="padding-left:10px;">
+ <div ng-click="showHide=!showHide" class="yellow" style="padding-left:10px;">
     <div>{{node.name}}
-    <p><a ng-click="showHide=!showHide">Toggle State: {{!!showHide}}</a></p>
+    <p><a>Toggle State: {{!!showHide}}</a></p>
     
   </div>
 
-    <div ng-repeat="child in node.children">
+    <div ng-hide="showHide" ng-repeat="child in node.children">
       <tree node="child" parent="node"></tree>
          </div>
  </div>
 
   """
     
-
+# Identifies directives in html
 app.directive 'tree', ($compile) -> {
-
+# Makes sure that elements with 'tree' as the element name are used
   restrict: 'E',
+# Not sure exactly what this does, has something to do with nesting
   scope: {
     node: "="
     parent: "="
   }
-
+# Calls in correct html
   link : (scope, elem, attrs) ->
     elem.append ($compile treeHtml) scope
 }
@@ -61,7 +62,7 @@ link : (scope, elem, attrs) ->
 
 @MyCtrl = ($scope) ->
 
-  $scope.root = {
+  $scope.roots = {
 
     name : "root"
     children : [ 
@@ -73,11 +74,36 @@ link : (scope, elem, attrs) ->
       
       {name : "Child 2", 
       children : [] }
+    ],
+    name : "root2"
+    children : [ 
+      {name : "Child 1", 
+      children : [
+        {name : "Grandchild 1",
+        children : [] }
+        ] }, 
+      
+      {name : "Child 2", 
+      children : [] }
     ]
-
   }
 
-  $scope.boot = {
+  $scope.foots = {
+
+    name : "foot"
+    children : [ 
+      {name : "Child 1", 
+      children : [
+        {name : "Grandchild 1",
+        children : [] }
+        ] }, 
+      
+      {name : "Child 2", 
+      children : [] }
+    ]
+  }
+
+  $scope.boots = {
 
     name : "boot"
     children : [ 
