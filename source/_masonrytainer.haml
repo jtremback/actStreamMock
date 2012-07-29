@@ -1,16 +1,3 @@
-.tile{"ng-repeat" => "annotation in annotations"}
-  .hyp-paper.hyp-excerpt
-    %a{:href => "{{annotation.link}}"} {{annotation.page}}
-    %blockquote
-      {{annotation.excerpt}}
-  .hyp-annotation.hyp-paper.hyp-detail
-    .topbar
-      .hyp-user {{annotation.name}}
-      .hyp-time {{annotation.time}}
-    .hyp-content {{render(annotation.text)}}
-
-
-
 %div(ng-app="myApp")
   %h1 Tree demo AngularJS
 

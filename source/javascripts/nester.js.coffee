@@ -39,33 +39,35 @@ link : (scope, elem, attrs) ->
 
 annoHtml =
   """
-<div class="tile">
-  <div class="hyp-paper hyp-excerpt">
+<ul class="annotator-widget annotator-listing">
+  <li class="hyp-paper hyp-excerpt">
     <a href="{{node.link}}">{{node.page}}</a>
     <blockquote>
       {{node.excerpt}}
     </blockquote>
-  </div>  
+  </li>  
   <li class="hyp-annotation hyp-paper hyp-detail" ng-click="showHide=!showHide">   
     <div class="topbar">
-      <div class="hyp-user">{{node.name}}</div>
+      <div class="hyp-user">{{node.username}}</div>
       <div class="hyp-time">{{node.time}}</div>
     </div>    
-    <div class="hyp-content">{{render(node.text)}}</div>    
+    <div class="hyp-content">{{node.text}}</div>    
     <div class="hyp-thread">
-      <ul class="annotator-listing" ng-hide="showHide" ng-repeat="child in node.children">
-        <tree node="child" parent="node"></tree>
+      <ul class="annotator-listing" ng-show="showHide">
+
+      <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+
       </ul>
     </div>
   </li>
-</div>
+</ul>
 
   """
 
 # Templating for replies tree
 app.directive 'tree', ($compile) -> {
 
-  restrict: 'E',
+  replace: true,
   scope: {
     node: "="
     parent: "="
@@ -77,18 +79,24 @@ app.directive 'tree', ($compile) -> {
 
 treeHtml =
   """
- <div class="blue" style="padding-left:10px;">
-    <div>{{node.name}}
-    
-  </div>
+<a class="hyp-threadexp" href="#collapse"></a>
+<div class="topbar">
+  <div class="hyp-user">{{node.username}}</div>
+  <div class="hyp-time">{{node.time}}</div>
+</div>
+<div class="hyp-content">{{node.text}}</div>
+<div class="hyp-thread">
+  <ul class="annotator-listing"> 
 
-    <div ng-repeat="child in node.children">
-      <tree node="child" parent="node"></tree>
-         </div>
- </div>
+      <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+
+  </ul>
+</div>
 
   """
-
+  # <div class="annotator-controls">
+  #  <a href="#reply" class="hyp-write">Reply</a>
+  # </div>
 
 @MyCtrl = ($scope) ->
 
@@ -102,7 +110,26 @@ treeHtml =
         page: "Courageous class battlecruiser - Wikipedia, the free encyclopedia",
         link: "http://en.wikipedia.org/wiki/Courageous_class_battlecruiser",
         excerpt: "The Courageous class comprised three battlecruisers built for the Royal Navy during World War I. Nominally designed to support Admiral of the Fleet Lord John Fisher's Baltic Project, which was intended to land troops on the German Baltic Coast, ships of this class were fast but very lightly armoured with only a few heavy guns. To maximize their speed, the Courageous-class battlecruisers were the first capital ships of the Royal Navy to use geared steam turbines and small-tube boilers. ",
-        text: "<p>I have two separate editions of Brooks, with two difference sets of pagination. In neither edition, on page 170, is there anything to actually confirm, Data from a 15-foot (4.6 m) rangefinder in the armoured hood was input into a Mk IV* Dreyer Fire Control Table located in the Transmitting Station (TS) where it was converted into range and deflection data for use by the guns. I would suggest a closer reading of the pages involved.</p>"
+        text: "I have two separate editions of Brooks, with two difference sets of pagination. In neither edition, on page 170, is there anything to actually confirm, Data from a 15-foot (4.6 m) rangefinder in the armoured hood was input into a Mk IV* Dreyer Fire Control Table located in the Transmitting Station (TS) where it was converted into range and deflection data for use by the guns. I would suggest a closer reading of the pages involved.",
+        children : [
+          {
+            username: "Speciality",
+            time: "about 1 hour ago",
+            text: "I don't know what's going on with your books, but I just checked my 1987 edition and it states exactly that"
+            children: [
+              {
+                username: "RLCoolstein",
+                time: "57 minutes ago",
+                text: "We need to get to the bottom of this."
+              },
+              {
+                username: "Bozo",
+                time: "30 minutes ago",
+                text: "Weird discrepancy."
+              }
+            ]
+          }
+        ]
       },
       {
         username: "RLCoolstein",
@@ -113,6 +140,5 @@ treeHtml =
         text: "<p>I have two separate editions of Brooks, with two difference sets of pagination. In neither edition, on page 170, is there anything to actually confirm, Data from a 15-foot (4.6 m) rangefinder in the armoured hood was input into a Mk IV* Dreyer Fire Control Table located in the Transmitting Station (TS) where it was converted into range and deflection data for use by the guns. I would suggest a closer reading of the pages involved.</p>"
       }
     ]
-
   }
 
