@@ -37,12 +37,10 @@ annoHtml =
 <div class="pagetile"></div>
 <a href="{{node.link}}">{{node.page}}</a>
 <ul class="annotator-widget annotator-listing">
-  <li class="hyp-paper hyp-excerpt">
+  <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
     <blockquote>
       {{node.excerpt}}
     </blockquote>
-  </li>  
-  <li class="hyp-annotation hyp-paper hyp-detail" ng-click="showHide=!showHide">   
     <div class="topbar">
       <div class="hyp-user">{{node.username}}</div>
       <div class="hyp-time">{{node.time}}</div>
