@@ -427,3 +427,8 @@ treeHtml =
     ]
   }
 
+  #MASONRY
+$("#stream").masonry
+  itemSelector: ".tile"
+  isFitWidth: true
+

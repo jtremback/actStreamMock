@@ -10,7 +10,7 @@
   margin-top: 6em;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 80%;
   .tile {
     position: relative;
     padding: 1em;
@@ -25,9 +25,9 @@
       background: url("../images/noise_1.png");
       position: absolute;
       top: 0;
-      bottom: 5%;
       left: 0;
       right: 25%;
+      height: 90px;
       z-index: -1;
     }
     a {
