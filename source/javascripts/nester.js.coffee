@@ -427,8 +427,11 @@ treeHtml =
     ]
   }
 
+
+
   #MASONRY
-$("#stream").masonry
-  itemSelector: ".tile"
-  isFitWidth: true
+setTimeout (->
+  $("#stream").masonry
+    itemSelector: ".tile"
+), 500
 
