@@ -34,9 +34,10 @@ link : (scope, elem, attrs) ->
 
 annoHtml =
   """
+<div class="pagetile"></div>
+<a href="{{node.link}}">{{node.page}}</a>
 <ul class="annotator-widget annotator-listing">
   <li class="hyp-paper hyp-excerpt">
-    <a href="{{node.link}}">{{node.page}}</a>
     <blockquote>
       {{node.excerpt}}
     </blockquote>
