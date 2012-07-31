@@ -103,6 +103,7 @@ treeHtml =
         time: "about 3 hours ago",
         page: "Courageous class battlecruiser - Wikipedia, the free encyclopedia",
         link: "http://en.wikipedia.org/wiki/Courageous_class_battlecruiser",
+        domain: "wikipedia.org",
         excerpt: "The Courageous class comprised three battlecruisers built for the Royal Navy during World War I. Nominally designed to support Admiral of the Fleet Lord John Fisher's Baltic Project, which was intended to land troops on the German Baltic Coast, ships of this class were fast but very lightly armoured with only a few heavy guns. To maximize their speed, the Courageous-class battlecruisers were the first capital ships of the Royal Navy to use geared steam turbines and small-tube boilers. ",
         text: "I have two separate editions of Brooks, with two difference sets of pagination. In neither edition, on page 170, is there anything to actually confirm, Data from a 15-foot (4.6 m) rangefinder in the armoured hood was input into a Mk IV* Dreyer Fire Control Table located in the Transmitting Station (TS) where it was converted into range and deflection data for use by the guns. I would suggest a closer reading of the pages involved.",
         children : [
@@ -130,6 +131,7 @@ treeHtml =
         time: "about 1 day ago",
         page: "The Official Site of the Pittsburgh Pirates",
         link: "http://pittsburgh.pirates.mlb.com/index.jsp?c_id=pit",
+        domain: "pittsburgh.pirates.mlb.com"
         excerpt: "Tackle heave down prow Jack Tar spyglass splice the main brace belay scuttle square-rigged parrel. Yard Barbary Coast man-of-war tackle Privateer jolly boat bilged on her anchor fire in the hole keel lanyard.  Gunwalls keel boom chantey cable Admiral of the Black Sink me! cog rope's end lee.  Swing the lead jack rum list sutler dead men tell no tales bilge league bilge rat ye.",
         text: "Quarterdeck lee rum provost grog gunwalls hands rope's end Yellow Jack dead men tell no tales.  Spanish Main Privateer fire in the hole yard skysail jolly boat snow parley chandler run a shot across the bow.",
         children: [
@@ -159,6 +161,7 @@ treeHtml =
         time: "about 3 day ago",
         page: "China cancels waste project after protests turn violent | Reuters",
         link: "http://www.reuters.com/article/2012/07/28/us-china-environment-protest-idUSBRE86R02Y20120728",
+        domain: "reuters.com"
         excerpt: "Demonstrators seized bottles of liquor and wine from the offices along with cartons of cigarettes, items which Chinese officials frequently receive as bribes. A photograph posted on Sina Weibo, the main Chinese microblogging service, showed some of the items displayed outside the government building.",
         text: "Chinese officials sound really easy to bribe."
         children : [
@@ -243,6 +246,7 @@ treeHtml =
         time: "about 21 hours ago",
         page: "Microsoft Files Motion in Apple v. Samsung to Hide Patent License Agreement Terms ~pj",
         link: "http://groklaw.net/article.php?story=20120727084323510",
+        domain: "groklaw.net"
         excerpt: "I seriously want to see those license terms, and I'd go so far as to suggest that the public has a right to know what those terms are, particularly future victims of Microsoft's patent strategy, and I know you want to know this too, because we've all heard the rumors that Microsoft licenses on very, very low royalties, just to be able to say to the world that Android/Linux folks are paying Microsoft for its patents. I'd love to know if that is true. Plus, if Microsoft paid for Samsung's FRAND patents the fee Samsung is asking Apple for, on what basis would Microsoft argue in its litigation against Motorola, that FRAND patents should be paid for at a greatly reduced royalty?",
         text: "Seems to me that the article singles out Microsoft because it puts this motion in the context of Microsoft making secret patent deals with Android manufacturers:"
         children : [
@@ -263,6 +267,7 @@ treeHtml =
         time: "about 2 days ago",
         page: "pirates-html",
         link: "http://www.fortmyersattractionsandtours.com/pirate-html.aspx",
+        domain: "fortmyersattractionsandtours.com"
         excerpt: "Run a shot across the bow splice the main brace Pieces of Eight gunwalls Jack Ketch.  Jack Buccaneer lad barkadeer spirits.  Gaff keel splice the main brace broadside black jack.",
         text: "Trysail Pirate Round ahoy belay aft sheet mizzen Jack Tar lass prow draught grog blossom six pounders gally yardarm.",
         children: [
@@ -293,6 +298,7 @@ treeHtml =
         time: "1 day ago",
         page: "How Microsoft Lost Its Mojo: Steve Ballmer and Corporate America’s Most Spectacular Decline | Business | Vanity Fair",
         link: "http://m.vanityfair.com/business/2012/08/microsoft-lost-mojo-steve-ballmer",
+        domain: "m.vanityfair.com"
         excerpt: "In December 2000, Microsoft had a market capitalization of $510 billion, making it the world’s most valuable company. As of June it is No. 3, with a market cap of $249 billion. In December 2000, Apple had a market cap of $4.8 billion and didn’t even make the list. As of this June it is No. 1 in the world, with a market cap of $541 billion.",
         text: "In other words, Apple is currently about where Microsoft was when they started paying dividends a little more than a decade ago...i.e. The point where they went from a growth company to a the sort of 'blue chip' held by index funds. The past decade has been spent securing their place in enterprise - their core market and one in which Apple, Google, and Facebook offer little competition. With loads of cash, a conucopia of brilliant personnel and Gates and Ballmer as the two largest shareholders, the whims of Wall Street bloggers don't have much effect.",
         children: [
@@ -327,6 +333,7 @@ treeHtml =
         time: "about 6 hours ago",
         page: "Japanese equestrian defies Father Time as the oldest competitor at London Olympics - Yahoo! Sports",
         link: "http://sports.yahoo.com/news/olympics--japanese-equestrian-defies-father-time-as-oldest-competitor-at-london-olympics.html",
+        domain: "sports.yahoo.com"
         excerpt: "I have not seen my wife, Motoko, for more than a year",
         text: "The key to a long-lasting marriage",
         children: [
@@ -366,6 +373,7 @@ treeHtml =
         time: "about 23 hours ago",
         page: "ancient pirates | ancient piracy",
         link: "http://www.piratesinfo.com/cpi_ancient_piracy_ancient_pirates_511.asp",
+        domain: "piratesinfo.com"
         excerpt: "Blow the man down grapple Jack Ketch gunwalls scurvy.  Coffer belay Pirate Round crow's nest tackle.  Log Davy Jones' Locker jolly boat crack Jennys tea cup mizzenmast.Galleon spyglass case shot parrel loaded to the gunwalls.  Nipperkin six pounders Blimey! jib Yellow Jack.  Pressgang grog blossom Davy Jones' Locker Arr! Yellow Jack.  ",
         text: "Chase guns quarter list spirits ahoy hail-shot hang the jib.  Gun sheet coffer provost execution dock run a rig coxswain.  Swing the lead lad chandler bring a spring upon her cable knave Gold Road yard.  Take a caulk American Main holystone poop deck run a shot across the bow warp grog blossom.  Grog sloop Jack Ketch Jack Tar line gunwalls strike colors.  Bucko wench splice the main brace stern gangplank spike dance the hempen jig.  Lass boom hardtack come about American Main take a caulk line.  Nelsons folly list overhaul keel skysail landlubber or just lubber ahoy.  Lugger bounty prow wherry cog Yellow Jack grapple."
       },
@@ -374,6 +382,7 @@ treeHtml =
         time: "about 1 hour ago",
         page: "German renewables output hits record high in H1 | Reuters",
         link: "http://www.reuters.com/article/2012/07/26/germany-renewables-idUSL6E8IQIA720120726",
+        domain: "reuters.com"
         excerpt: "Renewables now account for 25 percent of energy production, up from 21 percent last year, the country's energy industry association (BDEW) said in a statement that reinforced Germany's position as a leader in green technology.",
         text: "In related news, German electricity is 30% more expensive than French, and 300% more expensive than American.",
         children: [
@@ -394,6 +403,7 @@ treeHtml =
         time: "about 2 days ago",
         page: "Disney's Pirates of the Caribbean Online",
         link: "http://piratesonline.go.com/welcome",
+        domain: "piratesonline.go.com"
         excerpt: "Jolly Roger fathom shrouds code of conduct deadlights gabion rum scuppers red ensign squiffy.  Me wherry main sheet schooner yo-ho-ho blow the man down swab cog mizzenmast starboard.  Provost barque spirits prow lanyard Plate Fleet lass quarter avast tender.",
         text: "Pinnace ahoy case shot ho warp spanker bucko Arr! Privateer keel.  Lass capstan ye landlubber or just lubber code of conduct hang the jib Letter of Marque grog blossom red ensign jury mast.  Wench coffer loaded to the gunwalls case shot crack Jennys tea cup fathom mutiny scourge of the seven seas come about belaying pin.",
         children: [
@@ -421,6 +431,7 @@ treeHtml =
         time: "about 1 hour ago",
         page: "The Official site for International Talk Like a Pirate Day",
         link: "http://www.talklikeapirate.com/",
+        domain: "talklikeapirate.com"
         excerpt: "Run a shot across the bow black spot careen Gold Road walk the plank draft Admiral of the Black yardarm.  Deadlights pink rum jury mast Corsair landlubber or just lubber pinnace main sheet.  Landlubber or just lubber Nelsons folly yawl brig maroon tack to go on account take a caulk.  ",
         text: "Corsair barque cackle fruit lee brig grog provost pinnace American Main ho ye cog wench.  Rum salmagundi landlubber or just lubber yawl ahoy loaded to the gunwalls Pieces of Eight warp gabion bring a spring upon her cable furl yard gangplank.  Letter of Marque lanyard matey fire in the hole doubloon Nelsons folly hogshead weigh anchor line jolly boat poop deck American Main hulk. "
       }
