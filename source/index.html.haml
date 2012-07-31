@@ -1,6 +1,7 @@
 - content_for :head do
   %title Hypothesis Scratchpad
 
-/ = partial "nav.haml"
-= partial "masonrytainer.haml"
+= partial "nav.haml"
+%div(ng-app="myApp")
+  = partial "masonrytainer.haml"
 

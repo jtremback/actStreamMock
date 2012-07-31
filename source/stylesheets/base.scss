@@ -1,5 +1,4 @@
 @import 'compass/css3';
-@import url(http://fonts.googleapis.com/css?family=Merriweather|Open+Sans);
 
 // GRAYS
 $gray: #777;
@@ -24,7 +23,7 @@ $thread-padding: 1em;
 $threadexp-width: .8em;
 $score-width: 40px;
 $score-height: $score-width;
-$heatmap-width: 30px;
+$heatmap-width: 25px;
 
 // Columns
 $column: 48;
@@ -36,13 +35,10 @@ $gutter: 24;
 
 /* Shadow mixins */
 @mixin smallshadow($a: 2px, $b: 2px, $c: .1) {
-  @include box-shadow($a $b 1em hsla(0, 0%, 0%, $c));
+  @include box-shadow($a $b 3px hsla(0, 0%, 0%, $c));
 }
 
 @mixin plainform {
-  @include single-transition("box-shadow", .6s, ease);
-  @include single-transition("-moz-box-shadow", .6s, ease);
-  @include single-transition("-webkit-box-shadow", .6s, ease);
   color: $gray;
   background-color: #ffffff !important;
   border: 1px solid $gray-lighter;
@@ -89,6 +85,7 @@ $gutter: 24;
   }
 }
 
+
 //ICON IMAGES
 @mixin icon_resets {
   background-repeat: no-repeat;
@@ -115,4 +112,43 @@ $gutter: 24;
 
 @mixin tertiarytext {
   font-size: .8em;
+}
+
+@mixin tabbox {
+  @include box-shadow(2px -10px 13px -8px hsla(0, 0%, 0%, .1) inset);
+  background: hsla(0, 0%, 99%, 1);
+  border-top-right-radius: 2em 5em;
+  border-top-left-radius: 2em 5em;
+  color: #999;
+  border: 1px solid $gray-lighter;
+  border-bottom: none;
+  &:hover {
+    background: white;
+  }
+  &:active {
+    @include box-shadow( none );
+  }
+}
+
+@mixin linkbutton {
+  text-decoration: none;
+  cursor: pointer;
+  padding-left: 1.3em;
+  background-size: 1em 1em;
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: black;
+}
+
+@mixin linkbutton_right {
+  @include linkbutton;
+  background-position: right;
+  padding-left: 0;
+  padding-right: 2em;
+}
+
+@mixin invisibox {
+  background: transparent;
+  border-color: transparent;
+  outline-color: transparent;
 }
