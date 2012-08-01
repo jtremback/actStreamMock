@@ -65,17 +65,17 @@ link : (scope, elem, attrs) ->
 annoHtml =
   """
 <div class="pagetile"></div>
-<a href="{{node.link}}">{{node.page|truncate:50}}</a>
+<a href="{{node.link}}">{{node.page|truncate:100}}</a>
 <ul class="annotator-widget annotator-listing">
   <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
     <blockquote>
-      {{node.excerpt|truncate:140}}
+      {{node.excerpt|truncate:300}}
     </blockquote>
     <div class="topbar">
       <div class="hyp-user">{{node.username}}</div>
       <div class="hyp-time">{{node.time}}</div>
     </div>    
-    <div class="hyp-content">{{node.text|truncate:140}}</div>    
+    <div class="hyp-content">{{node.text|truncate:300}}</div>    
     <div class="hyp-thread">
       <ul class="annotator-listing" ng-show="showHide">
 
