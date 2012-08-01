@@ -308,7 +308,7 @@ span.errorMsg {
     margin-left: $threadexp-width / 2;
 
     & > * {
-      padding: .5em 1em 1em $thread-padding;
+      padding: 0em 1em 1em $thread-padding;
     }
   }
 }
@@ -318,7 +318,7 @@ span.errorMsg {
   height: $threadexp-width;
   width: $threadexp-width;
   position: absolute;
-  top: .9em;
+  top: .4em;
   left: -( $threadexp-width / 2);
   outline: 1px dotted #aaa;
   background-image: url("../images/minus_1.png");
@@ -338,7 +338,6 @@ span.errorMsg {
   padding: 1em 2em;
   a {
     display: block;
-    position: relative;
     font-weight: bold;
     margin-bottom: 1em;
   }

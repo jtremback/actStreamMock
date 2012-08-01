@@ -1,4 +1,34 @@
-app = angular.module("myApp", [])
+app = angular.module("myApp", ["filters"])
+
+###
+Truncate Filter
+@Param text
+@Param length, default is 10
+@Param end, default is "..."
+@return string
+###
+angular.module("filters", []).filter "truncate", ->
+  (text, length, end) ->
+    length = 10  if isNaN(length)
+    end = "..."  if end is `undefined`
+    if text.length <= length or text.length - end.length <= length
+      text
+    else
+      String(text).substring(0, length - end.length) + end
+
+###
+Usage
+
+var myText = "This is an example.";
+
+{{myText|Truncate}}
+{{myText|Truncate:5}}
+{{myText|Truncate:25:" ->"}}
+Output
+"This is..."
+"Th..."
+"This is an e ->"
+###
 
 #Templating for list
 app.directive 'list', ($compile) -> {
@@ -35,17 +65,17 @@ link : (scope, elem, attrs) ->
 annoHtml =
   """
 <div class="pagetile"></div>
-<a href="{{node.link}}">{{node.page}}</a>
+<a href="{{node.link}}">{{node.page|truncate:50}}</a>
 <ul class="annotator-widget annotator-listing">
   <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
     <blockquote>
-      {{node.excerpt}}
+      {{node.excerpt|truncate:140}}
     </blockquote>
     <div class="topbar">
       <div class="hyp-user">{{node.username}}</div>
       <div class="hyp-time">{{node.time}}</div>
     </div>    
-    <div class="hyp-content">{{node.text}}</div>    
+    <div class="hyp-content">{{node.text|truncate:140}}</div>    
     <div class="hyp-thread">
       <ul class="annotator-listing" ng-show="showHide">
 
@@ -444,5 +474,5 @@ treeHtml =
 setTimeout (->
   $("#stream").masonry
     itemSelector: ".tile"
-), 500
+), 5000
 

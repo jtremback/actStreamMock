@@ -31,7 +31,7 @@
       height: 90px;
       z-index: -1;
     }
-    a {
+    & > a {
       width: 70%;
       display: inline-block;
       margin-bottom: 1em;
