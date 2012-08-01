@@ -69,7 +69,9 @@ annoHtml =
 <div><a href="{{node.link}}">{{node.page|truncate:100}}</a></div>
 <img class="favicon" src="http://{{node.domain}}/favicon.ico"/><span class="domain">{{node.domain}}</span>  
 <ul class="annotator-widget annotator-listing">
-  <li class="sidepanel">{{node.text|truncate:300}}</li>
+  <li class="sidepanel">
+    <div class="avatar"></div>
+  </li>
   <li class="hyp-paper hyp-excerpt">
     <blockquote>
       {{node.excerpt|truncate:300}}
