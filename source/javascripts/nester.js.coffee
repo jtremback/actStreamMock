@@ -69,10 +69,12 @@ annoHtml =
 <img class="favicon" src="http://{{node.domain}}/favicon.ico"/><a href="{{node.link}}">{{node.page|truncate:100}}</a>
   <ul class="annotator-widget annotator-listing">
     <li class="sidepanel">{{node.text|truncate:300}}</li>
-    <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
+    <li class="hyp-paper hyp-excerpt">
       <blockquote>
         {{node.excerpt|truncate:300}}
       </blockquote>
+    </li>
+    <li class="hyp-annotation hyp-paper hyp-detail" ng-click="showHide=!showHide">   
       <div class="topbar">
         <div class="hyp-user">{{node.username}}</div>
         <div class="hyp-time">{{node.time}}</div>
