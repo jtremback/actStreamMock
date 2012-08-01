@@ -11,9 +11,8 @@
   margin-left: auto;
   margin-right: auto;
   .tile {
-    width: 400px;
+    width: 600px;
     position: relative;
-    padding: 1em;
     margin: 1em;
     float: left;
     & > div {
@@ -26,15 +25,15 @@
       background: url("../images/noise_1.png");
       position: absolute;
       top: 0;
-      left: 0;
-      right: 25%;
+      left: 1em;
+      right: 1em;
       height: 90px;
       z-index: -1;
     }
     & > a {
       width: 70%;
       display: inline-block;
-      margin-bottom: 1em;
+      margin: .5em 2em;
       font-weight: bold;
     }
     .hyp-annotation {
