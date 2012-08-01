@@ -45,9 +45,11 @@ link : (scope, elem, attrs) ->
 
 listHtml =
   """
- <div id="stream">
-    <div anno="exp" class="tile" ng-repeat="child in node.children" node="child" parent="node"></div>
- </div>
+<div id="stream">
+  <ul class="annotator-widget annotator-listing">
+      <div anno="exp" class="tile" ng-repeat="child in node.children" node="child" parent="node"></div>
+  </ul>
+</div>
   """
 
 #Templating for annotations
@@ -64,27 +66,28 @@ link : (scope, elem, attrs) ->
 
 annoHtml =
   """
-<div class="pagetile"></div>
-<a href="{{node.link}}">{{node.page|truncate:100}}</a>
-<ul class="annotator-widget annotator-listing">
-  <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
-    <blockquote>
-      {{node.excerpt|truncate:300}}
-    </blockquote>
-    <div class="topbar">
-      <div class="hyp-user">{{node.username}}</div>
-      <div class="hyp-time">{{node.time}}</div>
-    </div>    
-    <div class="hyp-content">{{node.text|truncate:300}}</div>    
-    <div class="hyp-thread">
-      <ul class="annotator-listing" ng-show="showHide">
+<img class="favicon" src="http://{{node.domain}}/favicon.ico"/><a href="{{node.link}}">{{node.page|truncate:100}}</a>
+  <ul class="annotator-widget annotator-listing">
+    <li class="sidepanel">{{node.text|truncate:300}}</li>
+    <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
+      <blockquote>
+        {{node.excerpt|truncate:300}}
+      </blockquote>
+      <div class="topbar">
+        <div class="hyp-user">{{node.username}}</div>
+        <div class="hyp-time">{{node.time}}</div>
+      </div>    
+      <div class="hyp-content">{{node.text|truncate:300}}</div>    
+      <div class="hyp-thread">
+        <ul class="annotator-listing" ng-show="showHide">
 
-      <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+        <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
 
-      </ul>
-    </div>
-  </li>
-</ul>
+        </ul>
+      </div>
+    </li>
+  </ul>
+
 
   """
 
@@ -470,9 +473,9 @@ treeHtml =
 
 
 
-  #MASONRY
-setTimeout (->
-  $("#stream").masonry
-    itemSelector: ".tile"
-), 5000
+#   #MASONRY
+# setTimeout (->
+#   $("#stream").masonry
+#     itemSelector: ".tile"
+# ), 5000
 
