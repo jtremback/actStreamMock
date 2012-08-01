@@ -66,29 +66,30 @@ link : (scope, elem, attrs) ->
 
 annoHtml =
   """
-<img class="favicon" src="http://{{node.domain}}/favicon.ico"/><a href="{{node.link}}">{{node.page|truncate:100}}</a>
-  <ul class="annotator-widget annotator-listing">
-    <li class="sidepanel">{{node.text|truncate:300}}</li>
-    <li class="hyp-paper hyp-excerpt">
-      <blockquote>
-        {{node.excerpt|truncate:300}}
-      </blockquote>
-    </li>
-    <li class="hyp-annotation hyp-paper hyp-detail" ng-click="showHide=!showHide">   
-      <div class="topbar">
-        <div class="hyp-user">{{node.username}}</div>
-        <div class="hyp-time">{{node.time}}</div>
-      </div>    
-      <div class="hyp-content">{{node.text|truncate:300}}</div>    
-      <div class="hyp-thread">
-        <ul class="annotator-listing" ng-show="showHide">
+<div><a href="{{node.link}}">{{node.page|truncate:100}}</a></div>
+<img class="favicon" src="http://{{node.domain}}/favicon.ico"/><span class="domain">{{node.domain}}</span>  
+<ul class="annotator-widget annotator-listing">
+  <li class="sidepanel">{{node.text|truncate:300}}</li>
+  <li class="hyp-paper hyp-excerpt">
+    <blockquote>
+      {{node.excerpt|truncate:300}}
+    </blockquote>
+  </li>
+  <li class="hyp-annotation hyp-paper hyp-detail" ng-click="showHide=!showHide">   
+    <div class="topbar">
+      <div class="hyp-user">{{node.username}}</div>
+      <div class="hyp-time">{{node.time}}</div>
+    </div>    
+    <div class="hyp-content">{{node.text|truncate:300}}</div>    
+    <div class="hyp-thread">
+      <ul class="annotator-listing" ng-show="showHide">
 
-        <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+      <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
 
-        </ul>
-      </div>
-    </li>
-  </ul>
+      </ul>
+    </div>
+  </li>
+</ul>
 
 
   """
