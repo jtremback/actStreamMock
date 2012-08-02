@@ -20,13 +20,52 @@ body {
     width: 100%;
     padding: 1em;
     margin-bottom: 2em;
+    display: inline-block;
+    .domain {
+      text-align: right;
+      margin-bottom: .5em;
+      img{
+        float: right;
+      }
+    }
     .sidepanel {
       width: 200px;
-      background: white;
-      float: right;
+      height: 200px;
+      float: left;
+      margin-right: 1em;
+      .control {
+        display: block;
+        text-align: right;
+        float: right;
+        clear: both;
+        margin-bottom: 1em;
+        .innertext {
+          float: right;
+        }
+        .tempfave {
+          @include linkbutton_right;
+          background-image: url("../images/fave_1.png"); 
+        }
+        .tempexpand {
+          @include linkbutton_right;
+          background-image: url("../images/plus_2.png"); 
+        }
+        .tempgoto {
+          @include linkbutton_right;
+          background-image: url("../images/share_1.png"); 
+        }
+        .insidebox {
+          float: right;
+          width: 40px;
+          height: 40px;
+          background: url("../images/avatar_1.jpg");
+          margin-left: .5em;
+        }
+      }
     }
     .hyp-paper {
-      width: 500px;
+      width: 580px;
+      float: left;
     }
     .favicon {
       width: 16px;

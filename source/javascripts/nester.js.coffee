@@ -66,18 +66,28 @@ link : (scope, elem, attrs) ->
 
 annoHtml =
   """
-<div><a href="{{node.link}}">{{node.page|truncate:100}}</a></div>
-<img class="favicon" src="http://{{node.domain}}/favicon.ico"/><span class="domain">{{node.domain}}</span>  
+<div class="domain">{{node.domain}}&nbsp;&nbsp;<img class="favicon" src="http://{{node.domain}}/favicon.ico"/></div>  
 <ul class="annotator-widget annotator-listing">
   <li class="sidepanel">
-    <div class="avatar"></div>
+    <div class="control">
+      <div class="insidebox"></div>
+      <div class="innertext">Replied to by <a>dhwly</a><br/><a>go to reply</a></div>
+    </div>
+    <div class="control btn">
+      <a class="tempexpand">Expand Thread</a>
+    </div>
+    <div class="control btn">
+      <a class="tempfave">Favorite</a>
+    </div>
+    <div class="control btn">
+      <div class="tempgoto">Go to page</div>
+    </div>
   </li>
-  <li class="hyp-paper hyp-excerpt">
+  <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
+    <div><a href="{{node.link}}">{{node.page|truncate:100}}</a></div>
     <blockquote>
       {{node.excerpt|truncate:300}}
     </blockquote>
-  </li>
-  <li class="hyp-annotation hyp-paper hyp-detail" ng-click="showHide=!showHide">   
     <div class="topbar">
       <div class="hyp-user">{{node.username}}</div>
       <div class="hyp-time">{{node.time}}</div>

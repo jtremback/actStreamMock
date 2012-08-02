@@ -332,10 +332,7 @@ span.errorMsg {
 
 //EXCERPT
 .hyp-excerpt {
-  @include box-shadow(1px 3px 8px rgba(0, 0, 0, .2));
-
   position: relative;
-  padding: 1em 2em;
   a {
     display: block;
     font-weight: bold;
@@ -348,7 +345,7 @@ span.errorMsg {
     font-family: "Merriweather";
     font-size: 1em;
     line-height: 1.3em;
-    margin: 0;
+    margin: 0 1em 1em;
 
     &:before {
       color: rgba(150, 150, 150, .5);
