@@ -76,11 +76,11 @@ annoHtml =
       <a class="tempfave">Favorite</a>
     </div>
     <div class="control btn">
-      <div class="tempgoto">Go to page</div>
+      <div class="tempgoto">To Annotation</div>
     </div>
   </li>
   <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
-    <div><a href="{{node.link}}">{{node.page|truncate:100}}</a>({{node.domain}})&nbsp;&nbsp;<img class="favicon" src="http://{{node.domain}}/favicon.ico"/></div>
+    <div class="page"><a href="{{node.link}}">{{node.page|truncate:100}}</a>({{node.domain}})&nbsp;&nbsp;<img class="favicon" src="http://{{node.domain}}/favicon.ico"/></div>
     <blockquote>
       {{node.excerpt|truncate:300}}
     </blockquote>
