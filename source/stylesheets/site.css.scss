@@ -70,10 +70,12 @@ body {
         }
         .fave {
           @include linkbutton_right;
-          background-image: url("../images/fave_1.png"); 
+          padding-right: 1.5em;
+          background-image: url("../images/fave_2.png"); 
         }
         .goto {
           @include linkbutton_right;
+          padding-right: 1.5em;
           background-image: url("../images/document_1.png"); 
         }
       }
@@ -82,6 +84,7 @@ body {
         float: right;
         margin-bottom: 1em;
         img {
+          border-radius: .25em;
           float: right;
           width: 60px;
           height: 60px;
