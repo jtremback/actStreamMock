@@ -67,20 +67,27 @@ link : (scope, elem, attrs) ->
 annoHtml =
   """
 <ul class="annotator-widget annotator-listing">
+
   <li class="sidepanel">
+    <div class="avablock">
+      <img class="ava" src="../images/avatar_1.jpg"/>
+    </div>
     <div class="control">
-      <div class="insidebox"></div>
-      <div class="innertext">Replied to by <a>dhwly</a><br/><a>go to reply</a></div>
+      <a class="fave">Favorite</a>
     </div>
-    <div class="control btn">
-      <a class="tempfave">Favorite</a>
-    </div>
-    <div class="control btn">
-      <div class="tempgoto">To Annotation</div>
+    <div class="control">
+      <div class="goto">To Annotation</div>
     </div>
   </li>
+
+  <div class="metadata">Replied to by <a>dwhly</a></div>
+
   <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
-    <div class="page"><a href="{{node.link}}">{{node.page|truncate:100}}</a>({{node.domain}})&nbsp;&nbsp;<img class="favicon" src="http://{{node.domain}}/favicon.ico"/></div>
+    <div class="page">
+      <a href="{{node.link}}">{{node.page|truncate:100}}</a>
+      <span>({{node.domain}}</span>
+      <img class="favicon" src="http://{{node.domain}}/favicon.ico"/>)
+    </div>
     <blockquote>
       {{node.excerpt|truncate:300}}
     </blockquote>

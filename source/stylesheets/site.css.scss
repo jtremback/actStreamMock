@@ -28,49 +28,70 @@ body {
         float: right;
       }
     }
+    .metadata {
+      font-size: 1.3em;
+      margin-bottom: .5em;
+    }
+    .page {
+      display: block;
+      margin-bottom: 1em;
+      a {
+        font-weight: bold;
+      }
+    }
     .sidepanel {
       width: 200px;
       height: 200px;
       float: left;
       margin-right: 1em;
+
       .control {
         display: block;
         text-align: right;
         float: right;
         clear: both;
         margin-bottom: 1em;
+        font-size: 1.3em;
+        opacity: .5;
+        &:hover {
+          opacity: .8;
+        }
         .innertext {
           float: right;
         }
-        .tempfave {
+        .fave {
           @include linkbutton_right;
           background-image: url("../images/fave_1.png"); 
         }
-        .tempexpand {
-          @include linkbutton_right;
-          background-image: url("../images/plus_2.png"); 
-        }
-        .tempgoto {
+        .goto {
           @include linkbutton_right;
           background-image: url("../images/share_1.png"); 
         }
-        .insidebox {
+      }
+
+      .avablock {
+        float: right;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+        img {
           float: right;
-          width: 40px;
-          height: 40px;
-          background: url("../images/avatar_1.jpg");
-          margin-left: .5em;
+          background-image: url("../images/avatar_1.jpg");
+          width: 60px;
+          height: 60px;
         }
       }
     }
+
     .hyp-paper {
       width: 580px;
       float: left;
     }
+
     .favicon {
       width: 16px;
       margin-right: .5em;
     }
+
     .hyp-annotation {
       margin-bottom: 0;
     }
