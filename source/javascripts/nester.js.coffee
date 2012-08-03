@@ -68,10 +68,12 @@ annoHtml =
   """
 <ul class="annotator-widget annotator-listing">
 
+  <div class="domain">{{node.domain}}<img class="favicon" src="http://{{node.domain}}/favicon.ico"/></div>
   <li class="sidepanel">
     <div class="avablock">
-      <img class="ava" src="../images/avatar_1.jpg"/>
+      <img class="ava" src="/images/avatar_1.jpg"/>
     </div>
+    <div class="metadata">Replied to by <a>dwhly</a></div>
     <div class="control">
       <a class="fave">Favorite</a>
     </div>
@@ -80,13 +82,9 @@ annoHtml =
     </div>
   </li>
 
-  <div class="metadata">Replied to by <a>dwhly</a></div>
-
   <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
     <div class="page">
-      <a href="{{node.link}}">{{node.page|truncate:100}}</a>
-      <span>({{node.domain}}</span>
-      <img class="favicon" src="http://{{node.domain}}/favicon.ico"/>)
+      <a href="{{node.link}}">{{node.page|truncate:80}}</a>
     </div>
     <blockquote>
       {{node.excerpt|truncate:300}}

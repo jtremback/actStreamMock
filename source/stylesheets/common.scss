@@ -353,15 +353,15 @@ span.errorMsg {
       left: -.45em;
     }
 
-    &:after {
-      color: rgba(150, 150, 150, .5);
-      content: "„";
-      font-family: "PT Serif";
-      font-size: 5em;
-      position: absolute;
-      right: -.5em;
-      bottom: .3em;
-    }
+    // &:after {
+    //   color: rgba(150, 150, 150, .5);
+    //   content: "„";
+    //   font-family: "PT Serif";
+    //   font-size: 5em;
+    //   position: absolute;
+    //   right: -.5em;
+    //   bottom: .3em;
+    // }
   }
 }
 

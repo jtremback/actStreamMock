@@ -19,7 +19,7 @@ body {
   .tile {
     width: 100%;
     padding: 1em;
-    margin-bottom: 0em;
+    margin-bottom: 1em;
     display: inline-block;
     .domain {
       text-align: right;
@@ -30,13 +30,22 @@ body {
     }
     .metadata {
       font-size: 1.3em;
-      margin-bottom: .5em;
+      margin-bottom: 1em;
+      float: right;
     }
     .page {
       display: block;
       margin-bottom: 1em;
       a {
         font-weight: bold;
+      }
+    }
+    .domain {
+      float: right;
+      clear: left;
+      width: 100%;
+      .favicon {
+        margin-left: .5em;
       }
     }
     .sidepanel {
@@ -65,19 +74,18 @@ body {
         }
         .goto {
           @include linkbutton_right;
-          background-image: url("../images/share_1.png"); 
+          background-image: url("../images/document_1.png"); 
         }
       }
 
       .avablock {
         float: right;
         margin-bottom: 1em;
-        font-size: 1.3em;
         img {
           float: right;
-          background-image: url("../images/avatar_1.jpg");
           width: 60px;
           height: 60px;
+          // background-image: url("../images/avatar_1.jpg");
         }
       }
     }
