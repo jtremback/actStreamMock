@@ -28,11 +28,6 @@ body {
         float: right;
       }
     }
-    .metadata {
-      font-size: 1.3em;
-      margin-bottom: 1em;
-      float: right;
-    }
     .page {
       display: block;
       margin-bottom: 1em;
@@ -42,8 +37,7 @@ body {
     }
     .domain {
       float: right;
-      clear: left;
-      width: 100%;
+
       .favicon {
         margin-left: .5em;
       }
@@ -59,8 +53,8 @@ body {
         text-align: right;
         float: right;
         clear: both;
-        margin-bottom: 1em;
-        font-size: 1.3em;
+        margin-bottom: .7em;
+        font-size: 1.5em;
         opacity: .5;
         &:hover {
           opacity: .8;
@@ -76,13 +70,18 @@ body {
         .goto {
           @include linkbutton_right;
           padding-right: 1.5em;
-          background-image: url("../images/document_1.png"); 
+          background-image: url("../images/goto_1.png"); 
+        }
+        .flag {
+          @include linkbutton_right;
+          padding-right: 1.5em;
+          background-image: url("../images/flag_4.png"); 
         }
       }
 
       .avablock {
         float: right;
-        margin-bottom: 1em;
+        margin-bottom: .5em;
         img {
           border-radius: .25em;
           float: right;
@@ -90,6 +89,11 @@ body {
           height: 60px;
           // background-image: url("../images/avatar_1.jpg");
         }
+      }
+      .metadata {
+        font-size: 1.3em;
+        text-align: right;
+        margin-bottom: 1em;
       }
     }
 

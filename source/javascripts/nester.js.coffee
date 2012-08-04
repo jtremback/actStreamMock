@@ -68,32 +68,33 @@ annoHtml =
   """
 <ul class="annotator-widget annotator-listing">
 
-  <div class="domain">{{node.domain}}<img class="favicon" src="http://{{node.domain}}/favicon.ico"/></div>
   <li class="sidepanel">
     <div class="avablock">
       <img class="ava" src="/images/avatar_1.jpg"/>
     </div>
-    <div class="metadata">Replied to by <a>dwhly</a></div>
+      <div class="metadata"><a>JordanLikesCoffee</a></div>
     <div class="control">
-      <a class="fave">Favorite</a>
+      <a class="goto"></a>
     </div>
     <div class="control">
-      <div class="goto">To Annotation</div>
+      <a class="fave"></a>
     </div>
   </li>
 
   <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
     <div class="page">
-      <a href="{{node.link}}">{{node.page|truncate:80}}</a>
+      <a href="{{node.link}}">{{node.page|truncate:60}}</a>
+      <div class="domain">{{node.domain}}<img class="favicon" src="http://{{node.domain}}/favicon.ico"/>
+      </div>
     </div>
     <blockquote>
-      {{node.excerpt|truncate:300}}
+      {{node.excerpt|truncate:140}}
     </blockquote>
     <div class="topbar">
       <div class="hyp-user">{{node.username}}</div>
       <div class="hyp-time">{{node.time}}</div>
     </div>    
-    <div class="hyp-content">{{node.text|truncate:300}}</div>    
+    <div class="hyp-content">{{node.text|truncate:200}}</div>    
     <div class="hyp-thread">
       <ul class="annotator-listing" ng-show="showHide">
 
