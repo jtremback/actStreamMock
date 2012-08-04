@@ -70,7 +70,7 @@ annoHtml =
 
   <li class="sidepanel">
     <div class="avablock">
-      <img class="ava" src="/images/avatar_1.jpg"/>
+      <img class="ava" src=".../images/avatar_1.jpg"/>
     </div>
       <div class="metadata"><a>JordanLikesCoffee</a></div>
     <div class="control">
