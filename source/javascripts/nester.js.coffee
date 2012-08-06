@@ -81,7 +81,13 @@ annoHtml =
     <div class="avablock">
       <img class="ava" src="images/avatar_1.jpg"/>
     </div>
-
+  <div class="metadata"><a>JordanLikesCoffee</a></div>
+  <div class="control">
+    <a class="goto"><div class="inner">To Annotation</div></a>
+  </div>
+  <div class="control">
+    <a class="fave"><div class="inner">Favorite</div></a>
+  </div>
   </li>
 
   <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
@@ -392,7 +398,8 @@ treeHtml =
         time: "about 6 hours ago",
         page: "Japanese equestrian defies Father Time as the oldest competitor at London Olympics - Yahoo! Sports",
         link: "http://sports.yahoo.com/news/olympics--japanese-equestrian-defies-father-time-as-oldest-competitor-at-london-olympics.html",
-        domain: "sports.yahoo.com"
+        domain: "sports.yahoo.com",
+        srclevel: true,
         excerpt: "I have not seen my wife, Motoko, for more than a year",
         text: "The key to a long-lasting marriage",
         children: [
