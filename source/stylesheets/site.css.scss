@@ -61,6 +61,9 @@ body {
           padding-right: 1.5em;
           float: right;
           div {
+            @include transition-property(width);
+            @include transition-duration(.14s);
+            @include transition-timing-function(ease-in);
             width: 0px;
             overflow: hidden;
             white-space: nowrap;
@@ -101,7 +104,7 @@ body {
       }
     }
     &:hover a > div {
-      width: auto !important;
+      width: 200px !important;
     }
 
     .hyp-paper {
