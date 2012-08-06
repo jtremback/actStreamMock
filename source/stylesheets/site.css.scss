@@ -42,48 +42,46 @@ body {
         margin-left: .5em;
       }
     }
-    .sidepanel {
+    .control {
+      display: block;
+      text-align: right;
+      float: right;
+      clear: both;
+      margin-bottom: .7em;
+      font-size: 1.5em;
+      opacity: .5;
+      a {
+        @include linkbutton_right;
+        padding-right: 1.5em;
+        float: right;
+        div {
+          @include transition-property(width);
+          @include transition-duration(.14s);
+          @include transition-timing-function(ease-in);
+          width: 0px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      &:hover {
+        opacity: .8;
+      }
+      .innertext {
+        float: right;
+      }
+      .fave {
+        background-image: url("../images/fave_2.png"); 
+      }
+      .goto {
+        background-image: url("../images/goto_1.png"); 
+      }
+      .flag {
+        background-image: url("../images/flag_4.png"); 
+      }
+      }    .sidepanel {
       width: 200px;
       float: left;
       margin-right: 1em;
-
-      .control {
-        display: block;
-        text-align: right;
-        float: right;
-        clear: both;
-        margin-bottom: .7em;
-        font-size: 1.5em;
-        opacity: .5;
-        a {
-          @include linkbutton_right;
-          padding-right: 1.5em;
-          float: right;
-          div {
-            @include transition-property(width);
-            @include transition-duration(.14s);
-            @include transition-timing-function(ease-in);
-            width: 0px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-        &:hover {
-          opacity: .8;
-        }
-        .innertext {
-          float: right;
-        }
-        .fave {
-          background-image: url("../images/fave_2.png"); 
-        }
-        .goto {
-          background-image: url("../images/goto_1.png"); 
-        }
-        .flag {
-          background-image: url("../images/flag_4.png"); 
-        }
-      }
 
       .avablock {
         float: right;

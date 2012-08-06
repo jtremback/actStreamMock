@@ -64,6 +64,16 @@ link : (scope, elem, attrs) ->
   elem.append ($compile annoHtml) scope
 }
 
+
+#   <div class="metadata"><a>JordanLikesCoffee</a></div>
+# <div class="control">
+#   <a class="goto"><div class="inner">To Annotation</div></a>
+# </div>
+# <div class="control">
+#   <a class="fave"><div class="inner">Favorite</div></a>
+# </div>
+
+
 annoHtml =
   """
 <ul class="annotator-widget annotator-listing">
@@ -71,13 +81,7 @@ annoHtml =
     <div class="avablock">
       <img class="ava" src="/images/avatar_1.jpg"/>
     </div>
-      # <div class="metadata"><a>JordanLikesCoffee</a></div>
-    # <div class="control">
-    #   <a class="goto"><div class="inner">To Annotation</div></a>
-    # </div>
-    # <div class="control">
-    #   <a class="fave"><div class="inner">Favorite</div></a>
-    </div>
+
   </li>
 
   <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
