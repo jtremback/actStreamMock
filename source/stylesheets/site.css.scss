@@ -19,7 +19,7 @@ body {
   .tile {
     width: 100%;
     padding: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0em;
     display: inline-block;
     .domain {
       text-align: right;
@@ -44,7 +44,6 @@ body {
     }
     .sidepanel {
       width: 200px;
-      height: 200px;
       float: left;
       margin-right: 1em;
 
