@@ -79,7 +79,7 @@ annoHtml =
 <ul class="annotator-widget annotator-listing">
   <li class="sidepanel">
     <div class="avablock">
-      <img class="ava" src="../images/avatar_1.jpg"/>
+      <img class="ava" src="images/avatar_1.jpg"/>
     </div>
 
   </li>
