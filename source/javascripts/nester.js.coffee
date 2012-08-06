@@ -69,14 +69,14 @@ annoHtml =
 <ul class="annotator-widget annotator-listing">
   <li class="sidepanel">
     <div class="avablock">
-      <img class="ava" src=".../images/avatar_1.jpg"/>
+      <img class="ava" src="/images/avatar_1.jpg"/>
     </div>
       <div class="metadata"><a>JordanLikesCoffee</a></div>
     <div class="control">
-      <a class="goto"></a>
+      <a class="goto"><div class="inner">To Annotation</div></a>
     </div>
     <div class="control">
-      <a class="fave"></a>
+      <a class="fave"><div class="inner">Favorite</div></a>
     </div>
   </li>
 

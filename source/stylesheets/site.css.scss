@@ -56,6 +56,16 @@ body {
         margin-bottom: .7em;
         font-size: 1.5em;
         opacity: .5;
+        a {
+          @include linkbutton_right;
+          padding-right: 1.5em;
+          float: right;
+          div {
+            width: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
         &:hover {
           opacity: .8;
         }
@@ -63,18 +73,12 @@ body {
           float: right;
         }
         .fave {
-          @include linkbutton_right;
-          padding-right: 1.5em;
           background-image: url("../images/fave_2.png"); 
         }
         .goto {
-          @include linkbutton_right;
-          padding-right: 1.5em;
           background-image: url("../images/goto_1.png"); 
         }
         .flag {
-          @include linkbutton_right;
-          padding-right: 1.5em;
           background-image: url("../images/flag_4.png"); 
         }
       }
@@ -95,6 +99,9 @@ body {
         text-align: right;
         margin-bottom: 1em;
       }
+    }
+    &:hover a > div {
+      width: auto !important;
     }
 
     .hyp-paper {
