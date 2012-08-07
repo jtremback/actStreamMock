@@ -73,44 +73,52 @@ link : (scope, elem, attrs) ->
 #   <a class="fave"><div class="inner">Favorite</div></a>
 # </div>
 
+# <div class="control">
+#   <a class="goto"><div class="inner">To Annotation</div></a>
+# </div>
+# <div class="control">
+#   <a class="fave"><div class="inner">Favorite</div></a>
+# </div>
 
 annoHtml =
   """
 <ul class="annotator-widget annotator-listing">
   <li class="sidepanel">
     <div class="avablock">
-      <img class="ava" src="images/avatar_1.jpg"/>
+      <img class="ava" src="images/{{node.avatar}}"/>
     </div>
-  <div class="metadata"><a>JordanLikesCoffee</a></div>
-  <div class="control">
-    <a class="goto"><div class="inner">To Annotation</div></a>
-  </div>
-  <div class="control">
-    <a class="fave"><div class="inner">Favorite</div></a>
-  </div>
   </li>
-
-  <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
-    <div class="page">
-      <a href="{{node.link}}">{{node.page|truncate:60}}</a>
-      <div class="domain">{{node.domain}}<img class="favicon" ng-src="http://{{node.domain}}/favicon.ico"/>
+  <div class="papercontainer">
+    <div class="metadata"><a>{{node.username}}</a> replied to:</div>
+    <div class="control">
+      <a class="goto"><div class="inner">To Annotation</div></a>
+    </div>
+    <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
+      <div class="page">
+        <a href="{{node.link}}">{{node.page|truncate:60}}</a>
+        <div class="domain">{{node.domain}}<img class="favicon" ng-src="http://{{node.domain}}/favicon.ico"/>
+        </div>
       </div>
-    </div>
-    <blockquote ng-show="node.srclevel">
-      {{node.excerpt|truncate:140}}
-    </blockquote>
-    <div class="topbar">
-      <div class="hyp-user">{{node.username}}</div>
-      <div class="hyp-time">{{node.time}}</div>
-    </div>    
-    <div class="hyp-content">{{node.text|truncate:200}}</div>    
-    <div class="hyp-thread">
-      <ul class="annotator-listing" ng-show="showHide">
+      <blockquote ng-show="node.srclevel">
+        {{node.excerpt|truncate:140}}
+      </blockquote>
+      <div class="topbar">
+        <div class="hyp-user">{{node.username}}</div>
+        <div class="hyp-time">{{node.time}}</div>
+      </div>    
+      <div class="hyp-content">{{node.text|truncate:200}}</div>    
+      <div class="hyp-thread">
+        <ul class="annotator-listing" ng-show="showHide">
 
-      <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+        <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
 
-      </ul>
-    </div>
+        </ul>
+      </div>
+    </li>
+  </div>
+  <li class="rightsidepanel">
+    <div class="biggoto"></div>
+    <div class="label">To Annotation</div>
   </li>
 </ul>
 
@@ -135,7 +143,9 @@ treeHtml =
 <a class="hyp-threadexp" href="#collapse"></a>
 <div class="topbar">
   <div class="hyp-user">{{node.username}}</div>
-  <div class="hyp-time">{{node.time}}</div>
+  <di  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;v class="hyp-time">{{node.time}}</div>
 </div>
 <div class="hyp-content">{{node.text}}</div>
 <div class="hyp-thread">
@@ -158,8 +168,10 @@ treeHtml =
     name : "New Annotations"
     children : [ 
       {
-        username: "RLCoolstein",
+        username: "topfroglivin",
+        avatar: "avatar_2.jpg",
         time: "about 3 hours ago",
+        faves: "3"
         page: "Courageous class battlecruiser - Wikipedia, the free encyclopedia",
         link: "http://en.wikipedia.org/wiki/Courageous_class_battlecruiser",
         domain: "wikipedia.org",
@@ -173,7 +185,7 @@ treeHtml =
             text: "I don't know what's going on with your books, but I just checked my 1987 edition and it states exactly that"
             children: [
               {
-                username: "RLCoolstein",
+                username: "topfroglivin420",
                 time: "57 minutes ago",
                 text: "We need to get to the bottom of this."
               },
@@ -187,7 +199,8 @@ treeHtml =
         ]
       },
       {
-        username: "Velvet_Jesus",
+        username: "xXbRiOnSgIrLXx",
+        avatar: "avatar_3.jpg",
         time: "about 3 day ago",
         page: "China cancels waste project after protests turn violent | Reuters",
         link: "http://www.reuters.com/article/2012/07/28/us-china-environment-protest-idUSBRE86R02Y20120728",
@@ -273,7 +286,8 @@ treeHtml =
         ]
       },
       {
-        username: "jkn",
+        username: "FutureFry",
+        avatar: "avatar_4.jpg",
         time: "about 21 hours ago",
         page: "Microsoft Files Motion in Apple v. Samsung to Hide Patent License Agreement Terms ~pj",
         link: "http://groklaw.net/article.php?story=20120727084323510",
@@ -295,7 +309,8 @@ treeHtml =
         ]
       },
       {
-        username: "brudgers",
+        username: "brion_buggers",
+        avatar: "avatar_5.jpg",
         time: "1 day ago",
         page: "How Microsoft Lost Its Mojo: Steve Ballmer and Corporate America’s Most Spectacular Decline | Business | Vanity Fair",
         link: "http://m.vanityfair.com/business/2012/08/microsoft-lost-mojo-steve-ballmer",
@@ -331,7 +346,8 @@ treeHtml =
         ]
       },
       {
-        username: "Graan",
+        username: "Mb'Skepteko",
+        avatar: "avatar_6.jpg",
         time: "about 6 hours ago",
         page: "Japanese equestrian defies Father Time as the oldest competitor at London Olympics - Yahoo! Sports",
         link: "http://sports.yahoo.com/news/olympics--japanese-equestrian-defies-father-time-as-oldest-competitor-at-london-olympics.html",
@@ -372,7 +388,8 @@ treeHtml =
         ]
       },
       {
-        username: "jbellis",
+        username: "P1MP_$TEVE",
+        avatar: "avatar_7.jpg",
         time: "about 1 hour ago",
         page: "German renewables output hits record high in H1 | Reuters",
         link: "http://www.reuters.com/article/2012/07/26/germany-renewables-idUSL6E8IQIA720120726",

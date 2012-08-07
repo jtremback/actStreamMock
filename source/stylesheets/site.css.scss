@@ -12,14 +12,14 @@ body {
 
 #stream {
   padding-top: 6em;
-  width: 820px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
   background: rgba(255, 255, 255, .5);
   .tile {
     width: 100%;
     padding: 1em;
-    margin-bottom: 0em;
+    margin-bottom: 1em;
     display: inline-block;
     .domain {
       text-align: right;
@@ -46,19 +46,18 @@ body {
       display: block;
       text-align: right;
       float: right;
-      clear: both;
       margin-bottom: .7em;
-      font-size: 1.5em;
+      font-size: 1.3em;
       opacity: .5;
       a {
         @include linkbutton_right;
-        padding-right: 1.5em;
+        padding-right: 1.3em;
         float: right;
         div {
           @include transition-property(width);
           @include transition-duration(.14s);
           @include transition-timing-function(ease-in);
-          width: 0px;
+
           overflow: hidden;
           white-space: nowrap;
         }
@@ -73,13 +72,13 @@ body {
         background-image: url("../images/fave_2.png"); 
       }
       .goto {
-        background-image: url("../images/goto_1.png"); 
+        background-image: url("../images/goto_2.png"); 
       }
       .flag {
         background-image: url("../images/flag_4.png"); 
       }
-      }    .sidepanel {
-      width: 200px;
+    }    
+    .sidepanel {
       float: left;
       margin-right: 1em;
 
@@ -87,26 +86,58 @@ body {
         float: right;
         margin-bottom: .5em;
         img {
-          border-radius: .25em;
-          float: right;
+          border-radius: .2em;
+          @include smallshadow;
+          opacity: .7;
           width: 60px;
           height: 60px;
           // background-image: url("../images/avatar_1.jpg");
         }
       }
-      .metadata {
-        font-size: 1.3em;
-        text-align: right;
-        margin-bottom: 1em;
+    }
+    .rightsidepanel {
+      float: left;
+      margin-left: 2em;
+      margin-top: 2em;
+      position: relative;
+      width: 100px;
+      .biggoto{
+        opacity: .3;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        background-image: url("../images/goto_4.png");
+      }
+      .label {
+        position: absolute;
+        bottom: 40%;
+        text-shadow:  white 0px 2px 1px, 
+                      white 2px 0px 1px, 
+                      white 0px -2px 1px, 
+                      white -2px 0px 1px;
       }
     }
-    &:hover a > div {
-      width: 200px !important;
+    .metadata {
+      font-size: 1.3em;
+      margin-bottom: .5em;
+      display: inline-block;
+      clear: none;
     }
-
-    .hyp-paper {
-      width: 580px;
+    &:hover {
+      a > .inner {
+        // width: 200px !important;
+      }
+      .ava {
+        opacity: 1 !important;
+      }
+    }
+    .papercontainer {
+      width: 600px;
       float: left;
+    }
+    .hyp-paper {
     }
 
     .favicon {
