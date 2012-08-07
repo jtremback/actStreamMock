@@ -47,7 +47,8 @@ body {
       text-align: right;
       float: right;
       margin-bottom: .7em;
-      font-size: 1.3em;
+      font-size: 1em;
+      font-weight: bold;
       opacity: .5;
       a {
         @include linkbutton_right;
@@ -125,7 +126,8 @@ body {
       }
     }
     .metadata {
-      font-size: 1.3em;
+      font-size: 1em;
+      font-weight: bold;
       margin-bottom: .5em;
       display: inline-block;
       clear: none;
