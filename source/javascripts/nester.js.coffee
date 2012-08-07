@@ -89,7 +89,7 @@ annoHtml =
     </div>
   </li>
   <div class="papercontainer">
-    <div class="metadata"><a>{{node.username}}</a> replied to:</div>
+    <div class="metadata"><a>{{node.username}}</a> annotated:</div>
     <div class="control">
       <a class="goto"><div class="inner">To Annotation</div></a>
     </div>
@@ -99,14 +99,18 @@ annoHtml =
         <div class="domain">{{node.domain}}<img class="favicon" ng-src="http://{{node.domain}}/favicon.ico"/>
         </div>
       </div>
-      <blockquote ng-show="node.srclevel">
+      <blockquote ng-show="node.srclevel" ng-hide="showHide">
         {{node.excerpt|truncate:140}}
+      </blockquote>
+      <blockquote ng-show="showHide">
+        {{node.excerpt}}
       </blockquote>
       <div class="topbar">
         <div class="hyp-user">{{node.username}}</div>
         <div class="hyp-time">{{node.time}}</div>
       </div>    
-      <div class="hyp-content">{{node.text|truncate:200}}</div>    
+      <div class="hyp-content" ng-hide="showHide">{{node.text|truncate:200}}</div>
+      <div class="hyp-content" ng-show="showHide">{{node.text}}</div>
       <div class="hyp-thread">
         <ul class="annotator-listing" ng-show="showHide">
 
@@ -116,14 +120,16 @@ annoHtml =
       </div>
     </li>
   </div>
-  <li class="rightsidepanel">
-    <div class="biggoto"></div>
-    <div class="label">To Annotation</div>
-  </li>
 </ul>
 
 
   """
+
+  # <li class="rightsidepanel">
+  #   <div class="biggoto"></div>
+  #   <div class="label">To Annotation</div>
+  # </li>
+
 
 # Templating for replies tree
 app.directive 'tree', ($compile) -> {
@@ -178,28 +184,28 @@ treeHtml =
         srclevel: true,
         excerpt: "The Courageous class comprised three battlecruisers built for the Royal Navy during World War I. Nominally designed to support Admiral of the Fleet Lord John Fisher's Baltic Project, which was intended to land troops on the German Baltic Coast, ships of this class were fast but very lightly armoured with only a few heavy guns. To maximize their speed, the Courageous-class battlecruisers were the first capital ships of the Royal Navy to use geared steam turbines and small-tube boilers. ",
         text: "I have two separate editions of Brooks, with two difference sets of pagination. In neither edition, on page 170, is there anything to actually confirm, Data from a 15-foot (4.6 m) rangefinder in the armoured hood was input into a Mk IV* Dreyer Fire Control Table located in the Transmitting Station (TS) where it was converted into range and deflection data for use by the guns. I would suggest a closer reading of the pages involved.",
-        children : [
-          {
-            username: "Speciality",
-            time: "about 1 hour ago",
-            text: "I don't know what's going on with your books, but I just checked my 1987 edition and it states exactly that"
-            children: [
-              {
-                username: "topfroglivin420",
-                time: "57 minutes ago",
-                text: "We need to get to the bottom of this."
-              },
-              {
-                username: "Bozo",
-                time: "30 minutes ago",
-                text: "Weird discrepancy."
-              }
-            ]
-          }
-        ]
+        # children : [
+        #   {
+        #     username: "Speciality",
+        #     time: "about 1 hour ago",
+        #     text: "I don't know what's going on with your books, but I just checked my 1987 edition and it states exactly that"
+        #     children: [
+        #       {
+        #         username: "topfroglivin420",
+        #         time: "57 minutes ago",
+        #         text: "We need to get to the bottom of this."
+        #       },
+        #       {
+        #         username: "Bozo",
+        #         time: "30 minutes ago",
+        #         text: "Weird discrepancy."
+        #       }
+        #     ]
+        #   }
+        # ]
       },
       {
-        username: "xXbRiOnSgIrLXx",
+        username: "xXbRiAnSgIrLXx",
         avatar: "avatar_3.jpg",
         time: "about 3 day ago",
         page: "China cancels waste project after protests turn violent | Reuters",
@@ -309,7 +315,7 @@ treeHtml =
         ]
       },
       {
-        username: "brion_buggers",
+        username: "brian_buggers",
         avatar: "avatar_5.jpg",
         time: "1 day ago",
         page: "How Microsoft Lost Its Mojo: Steve Ballmer and Corporate America’s Most Spectacular Decline | Business | Vanity Fair",

@@ -54,7 +54,7 @@ body {
         padding-right: 1.3em;
         float: right;
         div {
-          @include transition-property(width);
+          @include transition-property(opacity);
           @include transition-duration(.14s);
           @include transition-timing-function(ease-in);
 
@@ -72,6 +72,11 @@ body {
         background-image: url("../images/fave_2.png"); 
       }
       .goto {
+                  @include transition-property(opacity);
+          @include transition-duration(.14s);
+          @include transition-timing-function(ease-in);
+
+        opacity: 0;
         background-image: url("../images/goto_2.png"); 
       }
       .flag {
@@ -126,8 +131,8 @@ body {
       clear: none;
     }
     &:hover {
-      a > .inner {
-        // width: 200px !important;
+      .goto {
+        opacity: 1 !important;
       }
       .ava {
         opacity: 1 !important;
